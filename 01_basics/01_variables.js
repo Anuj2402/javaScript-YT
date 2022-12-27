@@ -1,3 +1,4 @@
+//const variables cannot be changed further
 
 const accountId = 12121;
 let accountEmail = "anuj@gmail.com";
