@@ -16,7 +16,6 @@ const regularUSer = {
 
     }
 }
-
 // console.log(regularUSer.fullname.lastname);
 
 const obj1 = {1: "a", 2:"b"}
@@ -71,10 +70,40 @@ const users = [
 
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser)); // it will store keys in an array ds
-console.log(Object.values(tinderUser)); // it will store values in an array ds
-console.log(Object.entries(tinderUser)); // it will give array inside array
+// console.log(Object.keys(tinderUser)); // it will store keys in an array ds
+// console.log(Object.values(tinderUser)); // it will store values in an array ds
+// console.log(Object.entries(tinderUser)); // it will give array inside array
 
-console.log(tinderUser.hasOwnProperty('isLoggedIN')); // it will print true or false by checking the entered parameter
+// console.log(tinderUser.hasOwnProperty('isLoggedIN')); // it will print true or false by checking the entered parameter
+
+// ***************************************************************************
+
+const course = {
+    couesrname : "JS in english",
+    price : "999",
+    courseInstructor : "Anuj Kumar"
+}
+
+// console.log (course.courseInstructor);
+//2nd way
+const {courseInstructor} = course
+console.log(courseInstructor);
+const {courseInstructor : simplename } = course
+console.log(simplename);
+// ****************************JSON INTRO******************
+// {
+//     //object is also a json
+//     "name" : "Anuj",
+//     "couesrname" : "JS in English",
+//     "price" : "FREE"
+// }
+
+
+// [
+//     {},
+//     {},
+//     {}
+//     // this is  json object inside array
+// ]
