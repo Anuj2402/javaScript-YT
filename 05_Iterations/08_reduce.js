@@ -1,5 +1,15 @@
 // reduce function
 
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+
 const myNums = [1,2,3]
 
 // if we dont pass initial value to the acc then accumulator will take array intial value
