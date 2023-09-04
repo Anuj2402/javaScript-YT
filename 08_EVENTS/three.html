@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async IN JS</title>
+</head>
+<body>
+    <h1>More on Events in JavaScript</h1>
+
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("Anuj", Date.now())
+    // }, 2000)
+    
+
+    // another way
+//     const sayName = function(){
+//           console.log("Anuj again");  
+//     }
+
+//    const intervalID= setInterval(sayName, 2000)
+//     clearInterval(intervalID)
+
+let intervalID2; // Declare intervalID2 in a broader scope
+
+const forstart = function() {
+    console.log("Anuj kumar");
+};
+
+const startButton = document.querySelector('#start');
+startButton.addEventListener('click', function() {
+    intervalID2 = setInterval(forstart, 2000); // Assign the intervalID2 variable.
+});
+
+const stopButton = document.querySelector('#stop');
+stopButton.addEventListener('click', function() {
+    clearInterval(intervalID2); // Clear the interval using the stored intervalID2.
+});
+
+
+
+</script>
+</html>

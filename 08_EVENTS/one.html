@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+
+<body style="background-color: #414141; color:aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    <!-- Event capturing and bubbling are two ways in which events can propagate through the DOM (Document Object Model) tree
+    in JavaScript.
+
+    Event capturing is the process of propagating an event from the outermost element to the target element. This means
+    that the event handler for the outermost element will be called first, followed by the event handler for the next
+    outermost element, and so on, until the event handler for the target element is called.
+   
+    Event bubbling is the process of propagating an event from the target element to its parent elements. This means
+    that the event handler for the target element will be called first, followed by the event handler for its parent
+    element, and so on, until the event handler for the outermost element is called. -->
+</body>
+<script>
+    // document.getElementById('owl').onclick=function(){
+    //     alert('owl is clicked')
+    // }
+
+    //attachEvent()-> used in early times (internet exporer)
+
+    //another approach 
+    //false is default here
+    // document.getElementById('owl').addEventListener('click', function () {
+    //     alert('owl clicked again')
+    //  }, false) 
+
+    //to be read
+    // type,timestamp, defaultPrevented
+    //target, toElement,srcElement,currentTarget,
+    //clientX, clientY,screenX,screenY
+    //altkey,ctrlKey,shiftkey,keyCode
+    
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     console.log(e);
+        // }, false)
+        
+        //Event propagations->bubbling example
+    // document.getElementById('images').addEventListener('click', function(){
+    //     console.log("clicked inside ul element");
+    // },false)
+    
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     console.log("clicked inside Owl");
+    // }, false)
+
+        //Event propagations->capturing example
+    // document.getElementById('images').addEventListener('click', function(){
+    //     console.log("clicked inside ul element");
+    // },true)
+    
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     console.log("clicked inside Owl");
+    // },true)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //    console.log("google clicked");
+
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+            // console.log(e.target.parentNode);
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            }
+    },false)
+
+</script>
+
+</html>

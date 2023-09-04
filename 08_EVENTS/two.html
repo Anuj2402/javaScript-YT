@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async IN JS</title>
+</head>
+<body>
+    <h1>Events in JavaScript</h1>
+
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //another way
+    const sayAnuj = function(e){
+        console.log("Anuj");
+    }
+    setTimeout(sayAnuj, 2000)
+    // setTimeout(function(){
+        
+    //     console.log("Anuj");
+    // }, 2000)
+
+    // document.querySelector('h1').innerHTML= "best js series" // this is immediate just taking nano sec to change
+    // another way to change text in 2 sec
+    const changeTxt= function(){
+        document.querySelector('h1').innerHTML = "best js series ever";
+    }
+
+   const chnageMe= setTimeout(changeTxt, 5000);
+
+   // this method is to stop the execution
+   document.querySelector('#stop').addEventListener('click', function(){
+     clearTimeout(chnageMe)
+     console.log("Stopeed");
+   })
+</script>
+</html>
