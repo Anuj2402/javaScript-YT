@@ -15,3 +15,4 @@ function sub(...num){
     console.log(arguments);
 }
 sub(4,3,2,1) // output -> [4,3,2,1] a array of values
+
