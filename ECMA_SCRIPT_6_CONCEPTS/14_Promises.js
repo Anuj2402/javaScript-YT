@@ -55,6 +55,7 @@ userData
 
 
 //Another way
+/*
 const userData = ()=> {
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
@@ -80,3 +81,5 @@ const userData = ()=> {
 userData()
         .then((data) => console.log(data))
         .catch((error)=> console.log(error))
+
+    */
