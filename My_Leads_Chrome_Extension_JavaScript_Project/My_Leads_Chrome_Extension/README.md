@@ -1,4 +1,4 @@
-# coc8640b4ab7ea074c56f6bdc
+# MY LEADS CHROME EXTENSION
 
 Quick start:
 
